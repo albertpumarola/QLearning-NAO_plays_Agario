@@ -1,2 +1,2 @@
 # QLearning-NAO_plays_Agario
-Reinforcement algorithm based on Q-Learning to enable a NAO robot play the game Agar.io 
+ROS compatible reinforcement learning algorithm based on Q-Learning that enables a NAO robot play the Agar.io game. 
