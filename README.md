@@ -2,6 +2,7 @@
 ROS compatible reinforcement learning algorithm based on Q-Learning that enables a NAO robot play the [Agar.io](http://agar.io/) game. The game state acquisition (cell's positions, radius, etc) is done with computer vision because the only allowed data input is the robot camera.
 
 ## Video
+Video of the developed algorithm playing with the learned model
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ihTgj4SA-ME
 " target="_blank"><img src="http://img.youtube.com/vi/ihTgj4SA-ME/0.jpg" 
 alt="Reinforcement learning - Nao robot plays Agar.io" /></a>
