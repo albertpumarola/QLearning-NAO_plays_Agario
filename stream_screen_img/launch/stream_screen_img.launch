@@ -1,0 +1,6 @@
+<launch>
+    <!--launch node-->
+    <node pkg="stream_screen_img" type="stream_screen_img_node" name="stream_screen_img" output="screen">
+	<remap from="video_output" to="camera/image_raw"/>
+    </node>
+</launch>

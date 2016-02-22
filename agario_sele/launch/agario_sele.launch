@@ -1,0 +1,31 @@
+<launch>
+    <!--<node name="camera_mock_from_file" pkg="camera_mock_from_file" type="camera_mock_from_file_node" output="screen">-->
+	<!--<param name="video_path" type="string" value="$(find agario_info)/data/video_samples/vid2.wmv"/>-->
+	<!--<remap from="video_output" to="camera/image_raw"/>-->
+    <!--</node>-->
+
+    <param name="agario_info/img_path" value="$(find agario_info)/data/img_samples/img1.png" />
+    <param name="agario_info/Q_path" value="$(find agario_info)/data/learning/Q.csv" />
+    <param name="agario_info/Q_save_path" value="$(find agario_info)/data/learning/Q" />
+    <param name="agario_info/train_mode" value="False" />
+
+    <!--<node pkg="stream_screen_img" type="stream_screen_img_node" name="stream_screen_img" output="screen">-->
+	<!--<remap from="video_output" to="camera/image_raw"/>-->
+    <!--</node>-->
+
+    <!--launch node-->
+    <node pkg="agario_info" type="agario_info_node" name="agario_info" output="screen">
+	<!--<remap from="video_input" to="camera/image_raw"/>-->
+	<remap from="video_output" to="agario_info/plan"/>
+    </node>
+    <node pkg="agario_mouse" type="agario_mouse_node.py" name="agario_mouse" output="screen"/>
+    <node pkg="agario_sele" type="agario_sele_node.py" name="agario_sele" output="screen"/>
+    <node pkg="agario_vid" type="agario_vid_node" name="agario_vid" output="screen">
+	<param name="video_path_out" type="string" value="$(find agario_vid)/res/agar.avi"/>
+	<remap from="video_input" to="agario_info/plan"/>
+    </node>
+
+
+    <!--dynparams-->
+    <node name="reconfigure_gui" pkg ="rqt_reconfigure" type="rqt_reconfigure" />
+</launch>

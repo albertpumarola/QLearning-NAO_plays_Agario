@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="agario_mouse" type="agario_mouse_node.py" name="agario_mouse" output="screen"/>
+</launch>

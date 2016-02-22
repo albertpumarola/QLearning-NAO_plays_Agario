@@ -1,0 +1,40 @@
+#include "globals.h"
+
+int GAUSSIAN_BLUR_SIZE = 9;
+std::string IMG_PATH;
+int HOUGH_INV_RATIO_RESOL = 1;
+int HOUGH_MIN_DIST = 100;
+int HOUGH_UPPER_THRESH = 200;
+int HOUGH_CENTER_THRESH = 100;
+int HOUGH_MIN_RADIUS = 0;
+int HOUGH_MAX_RADIUS = 0;
+double THRESHOLD_VALUE = 1;
+int EROSION_SIZE = 1;
+double CELL_MAX_RADIUS = 1;
+double CELL_MIN_RADIUS = 1;
+double CELL_CENTER_MIN_DIST = 1;
+double PELLET_RADIUS_RANGE = 1;
+double MAX_SHOOT_DIST = 1;
+double EVADE_SCAN_DISTANCE = 1;
+
+int NUM_RAYS = 16;
+int RAYS_RANGE = 9999;
+
+int NUM_PELLETS_REGIONS_X = 3;
+int NUM_PELLETS_REGIONS_Y = 3;
+int NUM_REGIONS_X = 3;
+int NUM_REGIONS_Y = 3;
+
+int IR_MAX_X=1;
+int IR_MAX_Y=1;
+int IR_MIN_X=1;
+int IR_MIN_Y=1;
+
+int MOUSE_CALIBRATE_X = 1;
+int MOUSE_CALIBRATE_Y = 1;
+
+std::string Q_FILE;
+std::string Q_SAVE_PATH;
+
+
+float RADIUS_ADDED_WHEN_EATEN_PELLET = 1;

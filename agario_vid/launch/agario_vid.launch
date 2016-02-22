@@ -1,0 +1,16 @@
+<launch>
+    <param name="agario_vid/img_path" value="$(find agario_vid)/data/img_samples/img1.png" />
+
+    <node name="camera_mock_from_file" pkg="camera_mock_from_file" type="camera_mock_from_file_node" output="screen">
+	<param name="video_path" type="string" value="$(find agario_vid)/data/video_samples/vid2.wmv"/>
+	<remap from="video_output" to="camera/image_raw"/>
+    </node>
+
+    <!--launch node-->
+    <node pkg="agario_vid" type="agario_vid_node" name="agario_vid" output="screen">
+    <param name="video_path_out" type="string" value="$(find agario_vid)/res/agar.avi"/>
+	<remap from="video_input" to="camera/image_raw"/>
+    </node>
+
+
+</launch>
