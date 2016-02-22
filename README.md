@@ -26,10 +26,16 @@ Q(x(t-1), u(t-1)) = random(beta, exploitation, exploration)
 * exploration: Q(x(t-1), u(t-1)) = IR + gamma * Q(x(t), random(u(t) | u(t) in U(t))
 * instantaneous reward: IR = R[x(t-1), u(t-1)] + R_still_alive + R_eat_pellet + R_eat_enemy
 
+## Execute
+```
+roslaunch agario_sele agario_sele.launch
+```
 
 ## TODO
 1. Improve game state acquisition:
   * Improve segmentation for occlusions and overlaps.
   * Improve Ray Trace algorithm.
 2. Decrease memory usage.
+
+
  
